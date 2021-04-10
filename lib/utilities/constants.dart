@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
 const kTempTextStyle = TextStyle(
@@ -7,7 +9,7 @@ const kTempTextStyle = TextStyle(
 
 const kMessageTextStyle = TextStyle(
   fontFamily: 'Spartan MB',
-  fontSize: 60.0,
+  fontSize: 45.0,
 );
 
 const kButtonTextStyle = TextStyle(
@@ -18,3 +20,13 @@ const kButtonTextStyle = TextStyle(
 const kConditionTextStyle = TextStyle(
   fontSize: 100.0,
 );
+
+// ignore: unused_element
+String path = _localPath;
+
+String get _localPath {
+  final directory = Directory('assets'); //await getApplicationDocumentsDirectory();
+  //Directory.current.;
+  //print(directory.path);
+  return directory.path;
+}
